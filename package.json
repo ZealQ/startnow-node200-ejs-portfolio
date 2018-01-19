@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "my personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZealQ/startnow-node200-ejs-portfolio.git"
+  },
+  "author": "Alonzo Quintero <Mrkingtero@yahoo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZealQ/startnow-node200-ejs-portfolio/issues"
+  },
+  "homepage": "https://github.com/ZealQ/startnow-node200-ejs-portfolio#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0"
+  }
+}
