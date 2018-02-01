@@ -1,0 +1,401 @@
+body,
+html {
+  font-family: 'Antic Didone', serif;
+  height: 100%;
+  background-color: #000c40;
+  text-shadow: 3px 3px 4px black;
+  line-height: 1.8;
+}
+
+
+p,
+b,
+h3,
+h2,
+h4,
+div {
+  font-family: 'Antic Didone', serif;
+  color: white;
+}
+
+
+.me {
+  box-shadow: 0 7px 20px 0 black, 0 8px 20px 0 white;
+  width: 300px;
+  height: 300px;
+}
+
+.parallax {
+  height: 500px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+}
+
+
+.parallax__group {
+  position: relative;
+  height: 500px;
+  height: 230vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax__layer--fore {
+  -webkit-transform: translateZ(90px) scale(.7);
+  transform: translateZ(90px) scale(.7);
+  z-index: 1;
+}
+
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 4;
+}
+
+.parallax__layer--back {
+  -webkit-transform: translateZ(-300px) scale(2);
+  transform: translateZ(-300px) scale(2);
+  z-index: 3;
+}
+
+.parallax__layer--deep {
+  -webkit-transform: translateZ(-600px) scale(3);
+  transform: translateZ(-600px) scale(3);
+  z-index: 2;
+}
+
+/* banners */
+
+.banner.secondary {
+  background: blueviolet;
+  background: -webkit-gradient(linear, left top, right top, from(#F0f2f0), to(#000c40));
+  background: linear-gradient(to right, #f0f0f0, #000c40);
+  z-index: -3;
+}
+
+.banner.md {
+  margin-top: 400px;
+  margin-bottom: 1px;
+  height: 400px;
+}
+
+.banner.skew-alt {
+  -webkit-transform: skewY(-10deg);
+  transform: skewY(-10deg);
+}
+
+.banner.skew {
+  -webkit-transform: skewY(10deg);
+  transform: skewY(10deg);
+}
+
+.banner {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  background: #424b68;
+  background: -webkit-gradient(linear, right top, left top, from(#000428), to(#004e92));
+  background: linear-gradient(to left, #000428, #004e92);
+}
+
+
+h2{
+  text-align: right;
+}
+
+h2 span.long_underline {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 0;
+  margin-top: 4px;
+  background: #000;
+}
+
+h3 span.long_underline {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 0;
+  margin-top: 4px;
+  background: #000;
+}
+
+
+body,
+
+
+body {
+  font: 100% / 1.5 'Antic Didone', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.parallax {
+  font-size: 200%;
+}
+
+
+#group1 {
+  z-index: 5;
+  /* slide over group 2 */
+}
+
+/* #group1 .parallax__layer--base {
+  background-image: url("http://www.yim778.com/data/out/28/726185.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+#group2 {
+  z-index: 3;
+  /* slide under groups 1 and 3 */
+}
+
+/* #group2 .parallax__layer--back {
+  background-image: url("http://auto.ferrari.com/en_US/wp-content/uploads/sites/7/2017/08/ferrari-portofino-2017-reveal-FRONT.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+#group3 {
+  z-index: 4;
+  /* slide over group 2 and 4 */
+}
+
+/* #group3 .parallax__layer--base {
+  background-image: url("https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/model/one-off/centenario/slider/centenario.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+#group4 {
+  z-index: 2;
+  /* slide under group 3 and 5 */
+}
+
+/* #group4 .parallax__layer--deep {
+  background-image: url("https://www.fab-design.com/files/fab/mclaren-slr/fab-mclaren-slr-00124.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+#group5 {
+  z-index: 3;
+  /* slide over group 4 and 6 */
+}
+
+/* #group5 .parallax__layer--base {
+  background-image: url("http://st.motortrend.com/uploads/sites/5/2016/12/2018-Lexus-LC-500h-rear-three-quarter.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+#group6 {
+  z-index: 2;
+  /* slide under group 5 and 7 */
+}
+
+/* #group6 .parallax__layer--back {
+  background-image: url("http://img.xcitefun.net/users/2015/01/375596,xcitefun-spring-nature-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+#group7 {
+  z-index: 3;
+  /* slide over group 7 */
+}
+
+/* #group7 .parallax__layer--base {
+  background-image: url("http://www.lyhyxx.com/data/out/16/3871006-spring-nature-wallpapers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+} */
+
+.text-animation {
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 70vh;
+
+margin-top: -200px
+}
+
+@media(orientation:portrait){
+  .text-animation{
+  display: inline-table; 
+  }
+}
+
+.text-animation li {
+  display: inline-block;
+  margin-right: 5px;
+  font-family: 'Antic Didone', serif;
+  font-weight: 400;
+  font-size: 60px;
+  color: white;
+  opacity: 1;
+  transition: all 1s ease
+}
+
+.text-animation li:last-child {
+  margin-right: 0;
+}
+
+.text-animation.hidden {
+  opacity: 0;
+}
+
+.text-animation.hidden li:nth-child(1) {
+  transform: translateX(-200px)translateY(-200px);
+  -webkit-transform: translateX(-200px)translateY(-200px);
+}
+
+.text-animation.hidden li:nth-child(2) {
+  transform: translateX(20px)translateY(100px);
+  -webkit-transform: translateX(20px)translateY(100px);
+}
+
+.text-animation.hidden li:nth-child(3) {
+  transform: translateX(-150px)translateY(-80px);
+  -webkit-transform: translateX(-150px)translateY(-80px);
+}
+
+.text-animation.hidden li:nth-child(4) {
+  transform: translateX(10px)translateY(-200px);
+  -webkit-transform: translateX(10px)translateY(-200px);
+}
+
+.text-animation.hidden li:nth-child(5) {
+  transform: translateX(-300px)translateY(200px);
+  -webkit-transform: translateX(-300px)translateY(200px);
+}
+
+.text-animation.hidden li:nth-child(6) {
+  transform: translateX(20px)translateY(-20px);
+  -webkit-transform: translateX(20px)translateY(-20px);
+}
+
+.text-animation.hidden li:nth-child(7) {
+  transform: translateX(30px)translateY(200px);
+  -webkit-transform: translateX(30px)translateY(200px);
+}
+
+.text-animation.hidden li:nth-child(8) {
+  transform: translateX(-200px)translateY(-200px);
+  -webkit-transform: translateX(-200px)translateY(-200px);
+}
+
+.text-animation.hidden li:nth-child(9) {
+  transform: translateX(20px)translateY(100px);
+  -webkit-transform: translateX(20px)translateY(100px);
+}
+
+.text-animation.hidden li:nth-child(10) {
+  transform: translateX(-150px)translateY(-80px);
+  -webkit-transform: translateX(-150px)translateY(-80px);
+}
+
+.text-animation.hidden li:nth-child(11) {
+  transform: translateX(10px)translateY(-200px);
+  -webkit-transform: translateX(10px)translateY(-200px);
+}
+
+.text-animation.hidden li:nth-child(12) {
+  transform: translateX(-300px)translateY(-200px);
+  -webkit-transform: translateX(-300px)translateY(-200px);
+}
+
+
+.bio {
+  margin-left: 160px;
+  margin-right: 160px;
+  position: static;
+}
+
+
+@media(max-width:600px){
+  .bio{
+ margin-left: 0;
+ margin-right: 0;  
+  }
+}
+
+@media(orientation:landscape){
+  .sk{
+    margin-top: 670px; 
+  }
+}
+
+
+.textb {
+  font-size: 40px;
+}
+
+.textc {
+  font-size: 30px;
+}
+
+.pp {
+  width: 100px;
+  height:100px;
+  margin-left: 40px;
+  box-shadow: 0 7px 20px 0 black, 0 8px 20px 0 white;
+-webkit-transition: width 1s, height 1s, -webkit-transform 1s;
+transition: width 1s, height 1s, transform 1s;
+
+transition-property: width,height,transform,font-size,opacity;
+transition-duration: 1s,1s,1s,1s,1s,1s;
+border-radius: 5px;
+}
+
+.pp:hover {
+width: 300px;
+height: 300px;
+}
+
+@media(orientation:landscape){
+  #tp{
+  display: none; 
+  }
+}
+
+.pcd{
+  position: absolute;
+    left: 0;
+    top: 30%;
+}
+.cdd{
+  position: relative;
+  top:40%;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+
+}
+
+#em{
+  margin-top: 10px;
+}

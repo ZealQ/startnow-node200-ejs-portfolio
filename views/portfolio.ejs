@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="shortcut icon" href="./img/logn.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Antic+Didone" rel="stylesheet">
+  <title>Alonzo Quintero's Portfolio</title>
+  <meta name="description" content="About Me And The Work I Do">
+  <title>Portfolio</title>
+</head>
+
+<body>
+
+
+
+  <!-- layer 5 -->
+  <div class="parallax__layer parallax__layer--back">
+    <!-- banner -->
+    <div class="banner skew"></div>
+  </div>
+
+  </div>
+  </div>
+  <div id="group5" class="parallax__group">
+
+
+    <div class="parallax__layer parallax__layer--base" id="portfolio">
+
+      <div class="w3-top">
+        <div class="w3-bar">
+          <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()"
+            title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+          </a>
+          <a href="/" class="w3-bar-item w3-button">
+            <i class="fa fa-home"></i>HOME</a>
+          <a href="/contact" class="w3-bar-item w3-button w3-hide-small">
+            <i class="fa fa-envelope"></i> CONTACT</a>
+          </a>
+        </div>
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+          <a href="/contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="pcd">
+        <div class="bgimg-2 w3-display-container">
+          <h3>
+            <span class="w3-xxlarge w3-text-white w3-wide" style="font-family:'Antic Didone', serif; margin-left:160px">PORTFOLIO</span>
+            <span class="long_underline left" style="width: 607px; left: -180px;"></span>
+          </h3>
+        </div>
+        <h4 class="w3-center textb" style="font-family:'Antic Didone', serif;">MY WORK</h4>
+        <p class="w3-center">
+          <em style="font-size:25px">Here are some of my latest Projects.
+            <br>Check Them Out.</em>
+        </p>
+        <br>
+        <div class="w3-col m3">
+          <a href="https://github.com/ZealQ/hackathon7">
+            <img src="./img/hack.png" class="pp" alt="My Hackothon">
+            <p style="font-size:25px">My Hackathon</p>
+        </div>
+        <br>
+
+        <div class="w3-col m3">
+          <a href="https://github.com/ZealQ/startnow-react100-change-calculator">
+            <img src="./img/mcal.png" class="pp" alt="Change Calculator">
+            <p style="font-size:25px">My Change Calculator</p>
+        </div>
+
+        <div class="w3-col m3">
+          <a href="https://github.com/ZealQ/startnow-react100-mortgage-calculator">
+            <img src="./img/mortcala.png" class="pp" alt="Mortgage Calculator">
+            <p style="font-size:25px">A Mortgage Calculator</p>
+        </div>
+
+        <div class="w3-col m3">
+          <a href="https://github.com/ZealQ/startnow-web101-astro-weight-calculator">
+            <img src="./img/astroc.png" class="pp" alt="Astro Calculator">
+            <p style="font-size:25px">An Astro Calculator</p>
+        </div>
+
+        <div class="w3-col m3">
+          <a href="https://github.com/ZealQ/startnow-web101-San-Diego-Top-Spots">
+            <img src="./img/SD.png" class="pp" alt="San Diego Top Spots">
+            <p style="font-size:25px">SD Top Spots</p>
+        </div>
+
+        <div class="w3-col m3">
+          <a href="https://github.com/ZealQ/startnow-react100-vstda">
+            <img src="./img/todo.png" class="pp" alt="My Todo List">
+            <p style="font-size:25px">VSTDA (Very Simple To Do App)</p>
+        </div>
+
+        <div class="w3-col m3">
+          <a href=" ">
+            <img src="./img/movF.png" class="pp" alt="Movie Finder">
+            <p style="font-size:25px">A Movie Finder</p>
+        </div>
+
+        <div class="w3-col m3">
+          <a href=" ">
+            <img src="./img/wethap.png" class="pp" alt="My Wether App">
+            <p style="font-size:25px">A Weather App</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- much needed scripts -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      setTimeout(function () {
+        $(".text-animation").removeClass("hidden");
+      }, 500);
+    })();
+  </script>
+
+  <script>
+
+
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+
+    window.onscroll = function () { myFunction() };
+    function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+      } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+      }
+    }
+
+
+    function toggleFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-10812217-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+
+</html>

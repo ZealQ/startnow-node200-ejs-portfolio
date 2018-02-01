@@ -1,10 +1,50 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Alonzo Thanks You</title>
-  </head>
-  <body>
-    <div>
-      Thank you <%= contact.firstName %> <%= contact.lastName %>.
+
+<head>
+  <link rel="shortcut icon" href="./img/logn.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> Thank You </title>
+</head>
+<style>
+
+
+
+html,
+body {
+  background: #136a8a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #b2fefe, #0ed2f7);
+  background: linear-gradient(to left, #b2fefe, #0ed2f7);
+}
+
+.contact{
+    color:white;
+    text-align: center;
+    position: relative;
+    left: 0;
+    top: 50%;
+    font-size: 50px;
+    text-shadow: 3px 3px 4px black;
+}
+
+.contact1{
+    color:white;
+    text-align: center;
+    position: relative;
+    left: 0;
+    top: 50%;
+    font-size: 50px;
+    text-shadow: 3px 3px 4px black;
+}
+
+</style>
+<body>
+    <div class="container-fluid">
+        <p class="contact">Thank you
+            <%= userInfo.firstName %> for your interest.<p>
+        <p class="contact1">I'll be in contact with you very soon!</p>
     </div>
-  </body>
+</body>
+
 </html>

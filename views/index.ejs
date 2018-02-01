@@ -1,10 +1,352 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title> Alonzo's Portfolio </title>
-  </head>
-  <body>
-    <div>
-      I am <%= person.firstName %> <%= person.lastName %>
+
+<head>
+  <link rel="shortcut icon" href="./img/logn.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Antic+Didone" rel="stylesheet">
+  <title>Alonzo Quintero's Portfolio</title>
+  <meta name="description" content="About Me And The Work I Do">
+
+</head>
+
+<body>
+
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()"
+        title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="/" class="w3-bar-item w3-button">
+        <i class="fa fa-home"></i>HOME</a>
+      <a href="#about" class="w3-bar-item w3-button w3-hide-small">
+        <i class="fa fa-user"></i> ABOUT</a>
+      <a href="#skills" class="w3-bar-item w3-button w3-hide-small">
+        <i class="fa fa-superpowers"></i> SKILLS</a>
+      <a href="/portfolio" class="w3-bar-item w3-button w3-hide-small">
+        <i class="fa fa-th"></i> PORTFOLIO</a>
+      <a href="/contact" class="w3-bar-item w3-button w3-hide-small">
+        <i class="fa fa-envelope"></i> CONTACT</a>
+      </a>
     </div>
-  </body>
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+      <a href="#skills" class="w3-bar-item w3-button" onclick="toggleFunction()">SKILLS</a>
+      <a href="/portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+      <a href="/contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    </div>
+  </div>
+
+
+  <div class="parallax">
+    <div class="parallax__layer parallax__layer--back">
+      <!-- banner -->
+      <div class="banner secondary skew-alt md"></div>
+    </div>
+    <div id="group1" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+
+        <br>
+        <ul class="text-animation hidden">
+          <li>W</li>
+          <li>E</li>
+          <li>L</li>
+          <li>C</li>
+          <li>O</li>
+          <li>M</li>
+          <li>E</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- layer 2 -->
+    <div class="parallax__layer parallax__layer--back">
+    </div>
+
+    <div id="group2" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <!-- banner  -->
+        <div class="banner secondary skew-alt md"></div>
+        <h3 style="font-family:'Antic Didone', serif; margin-left: 160px;" id="about"> ABOUT ME
+          <span class="long_underline left" style="width: 507px; left: -180px;"></span>
+        </h3>
+        <p class="w3-center">
+          <em>The Developer Life</em>
+        </p>
+        <p class="bio">Hi There! My name is Alonzo Quintero and I'm a highly motivated Full Stack Developer with a great passion for Web
+          Design and Learning. I'm always looking for new things to learn and ideas to create. Using Wordpad as well as actual
+          pen and paper as my notebook, ideas can come alive. Coding is so much fun, from exploring web technologies and
+          techniques to developing cool web apps, there is never a dull moment. Anything that can help me in expanding my
+          knowledge is always welcome. My Motto in work is "Work Smarter Not Harder" My portfolio was inspired by my Motto
+          and Good friends, it was developed by me from scratch based on front-end technologies including JavaScript, HTML5
+          and CSS. Cheers!
+        </p>
+        <div class="w3-col m6 w3-center w3-padding-large">
+          <p>
+            <b>
+              <i class="fa fa-user w3-margin-right"></i>Alonzo Quintero</b>
+          </p>
+          <br>
+          <img src="./img/selfie.jpg" class="me" class="w3-round w3-image" alt="Photo of Me">
+        </div>
+      </div>
+      <div class="parallax__layer parallax__layer--back">
+        <!-- banner -->
+        <div class="banner skew"></div>
+      </div>
+    </div>
+    <div id="group3" class="parallax__group">
+      <div class="parallax__layer parallax__layer--fore">
+      </div>
+
+
+      <!-- layer 3 -->
+      <div class="parallax__layer parallax__layer--base" id="skills">
+        <h2 class="sk" style="font-family:'Antic Didone', serif; margin-right: 230px;">Here Are My Current Skills.
+          <span class="long_underline right" style="width: 907px; right: -180px;"></span>
+        </h2>
+        <p class="w3-center w3-padding-16">My Skill Set:</p>
+        <p class="w3-wide">
+          <i class="fa fa-desktop"></i>Coding</p>
+        <div class="w3-light-grey">
+          <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:70%">70%</div>
+        </div>
+        <p class="w3-wide">
+          <i class="fa fa-laptop"></i>Web Design</p>
+        <div class="w3-light-grey">
+          <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:50%">50%</div>
+        </div>
+        <p class="w3-wide">
+          <i class="fa fa-photo"></i>Research</p>
+        <div class="w3-light-grey">
+          <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+        </div>
+        <br>
+        <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">3+</span>
+            <br> Partners
+          </div>
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">30+</span>
+            <br> Projects Done
+          </div>
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">100% of 0</span>
+            <br> Happy Clients
+          </div>
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">20+</span>
+            <br> Meetings
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- layer 4 -->
+    <!-- <div id="group4" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">  -->
+    <!-- banner -->
+    <!-- <div class="banner skew"></div>
+      </div>  -->
+
+
+
+    <!-- layer 5 -->
+    <!-- <div class="parallax__layer parallax__layer--back">
+      </div>
+      <div class="parallax__layer parallax__layer--deep"> -->
+    <!-- banner -->
+    <!-- <div class="banner skew"></div>
+      </div>
+    </div>
+    <div id="group5" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base" id="portfolio">
+        <br>
+        <div class="bgimg-2 w3-display-container">
+          <h3>
+            <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+            <span class="long_underline left" style="width: 607px; left: -180px;"></span>
+          </h3>
+        </div>
+        <h4 class="w3-center textb">MY WORK</h4>
+        <p class="w3-center">
+          <em>Here are some of my latest Projects.
+            <br>Check Them Out.</em>
+        </p>
+        <br>
+        <div class="w3-col m3">
+          <img src="./img/hack.png" class="pp"  alt="My Hackothon">
+          <p>My Hackathon</p>
+        </div>
+
+        <div class="w3-col m3">
+          <img src="./img/mcal.png" class="pp"  alt="Change Calculator">
+          <p>My Change Calculator</p>
+        </div>
+
+        <div class="w3-col m3">
+          <img src="./img/mortcala.png" class="pp"  alt="Mortgage Calculator">
+          <p>A Mortgage Calculator</p>
+        </div>
+
+        <div class="w3-col m3">
+          <img src="./img/astroc.png" class="pp"  alt="Astro Calculator">
+          <p>An Astro Calculator</p>
+        </div>
+
+        <div class="w3-col m3">
+          <img src="./img/SD.png" class="pp"  alt="San Diego Top Spots">
+          <p>SD Top Spots</p>
+        </div>
+
+        <div class="w3-col m3">
+          <img src="./img/todo.png" class="pp"  alt="My Todo List">
+          <p>VSTDA (Very Simple To Do App)</p>
+        </div>
+
+        <div class="w3-col m3">
+          <img src="./img/movF.png" class="pp"  alt="Movie Finder">
+          <p>A Movie Finder</p>
+        </div>
+
+        <div class="w3-col m3">
+          <img src="./img/wethap.png" class="pp"  alt="My Wether App">
+          <p>A Weather App</p>
+        </div>
+
+      </div>
+    </div> -->
+
+
+    <!-- layer 6 -->
+    <!-- <div id="group6" class="parallax__group">
+      <div class="parallax__layer parallax__layer--back"> -->
+    <!-- banner -->
+    <!-- <div class="banner secondary skew-alt md"></div>
+      </div>
+      <div class="parallax__layer parallax__layer--deep"> -->
+    <!-- banner -->
+    <!-- <div class="banner skew"></div>
+      </div>
+      <div class="parallax__layer parallax__layer--base">
+      </div>
+    </div>
+    <div id="group7" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <br>
+        <div class="bgimg-3 w3-display-container">
+          <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-content" id="contact">
+          <h4 class="w3-center textc">I Hope You Liked My Page!</h4>
+          <p class="w3-center">
+            <em>I'd love your feedback!</em>
+          </p>
+          <div class="w3-row">
+            <div class="w3-col m16">
+              <div class="w3-col m8 w3-panel">
+                <div class="w3-large w3-margin-bottom">
+                  <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> San Diego, US
+                  <br>
+                  <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: (619)261-1050
+                  <br>
+                  <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: Mrkingtero@yahoo.com
+                  <br>
+                </div>
+                <p>Thank You For Your
+                  <i class="fa fa-clock-o"></i>, And Interest In Me!</p>
+                <form action="/action_page.php" target="_blank">
+                  <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                    <div class="w3-half">
+                      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                    </div>
+                    <div class="w3-half">
+                      <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                    </div>
+                  </div>
+                  <br>
+                  <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                  <br>
+                  <input class="w3-input w3-border" type="number" placeholder="Phone Number" required name="phone number">
+                  <button class="w3-button w3-black w3-right w3-section" type="submit">
+                    <i class="fa fa-envelope-o"></i> SEND MESSAGE
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <footer class="w3-center">
+            <a href="#home" class="w3-button w3-black">
+              <i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+          </footer>
+        </div>
+      </div>
+    </div> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        setTimeout(function () {
+          $(".text-animation").removeClass("hidden");
+        }, 500);
+      })();
+    </script>
+
+    <script>
+
+
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+
+
+      window.onscroll = function () { myFunction() };
+      function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+        }
+      }
+
+
+      function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-10812217-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+</body>
+
 </html>
