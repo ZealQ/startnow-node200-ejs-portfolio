@@ -3,8 +3,9 @@
 const express = require("express");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
-const AccountSid= "AC7762f26decf4b81e06c7750e0fc96675";
-const authToken= "5dc51d6f3b0ae0890a9bcadd0f61a63a";
+const config = require("./config.js")
+const AccountSid = process.env.AccountSid || config.AccountSid;
+const authToken = process.env.authToken || config.authToken;
 const client = require("twilio")(AccountSid,authToken);
 
 const app = express();
