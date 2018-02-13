@@ -3,9 +3,10 @@
 const express = require("express");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
-const config = require("./config.js")
-const AccountSid = process.env.AccountSid || config.AccountSid;
-const authToken = process.env.authToken || config.authToken;
+// const config = require("./config.js")
+const dotenv = require("dotenv").config();
+const AccountSid = process.env.AccountSid;
+const authToken = process.env.authToken;
 const client = require("twilio")(AccountSid,authToken);
 
 const app = express();
