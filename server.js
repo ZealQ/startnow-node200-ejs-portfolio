@@ -1,14 +1,11 @@
-
-
 const express = require("express");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv").config();
-const AccountSid = process.env.AccountSid;
-const authToken = process.env.authToken;
-const client = require("twilio")(AccountSid,authToken);
-const PORT =process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 const app = express();
+
+
 
 app.use(morgan("dev"));
 app.use(bodyParser.json())
@@ -41,6 +38,12 @@ app.get('/contact', (req, res) => {
 });
 
 app.post('/thanks', (req, res) => {
+
+  const AccountSid = process.env.AccountSid;
+  const authToken = process.env.authToken;
+  const client = require("twilio")(AccountSid, authToken);
+
+
   var userInfo = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -48,7 +51,7 @@ app.post('/thanks', (req, res) => {
     email: req.body.email,
     message: req.body.message
   }
-console.log("REQ.BODY:  ", req.body);
+  console.log("REQ.BODY:  ", req.body);
   client.messages.create({
     to: "+16192611050",
     from: "+16193046191",
@@ -59,12 +62,12 @@ console.log("REQ.BODY:  ", req.body);
   }, function (err, message) {
     console.log(message.sid);
   });
-  res.render('thanks', {userInfo: userInfo})
+  res.render('thanks', { userInfo: userInfo })
 });
 
 
 
-app.listen(PORT, () => {
+module.exports = app.listen(PORT, () => {
   console.log(`listening at http://localhost:${PORT}`);
 });
 
