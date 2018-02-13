@@ -3,12 +3,11 @@
 const express = require("express");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
-// const config = require("./config.js")
 const dotenv = require("dotenv").config();
 const AccountSid = process.env.AccountSid;
 const authToken = process.env.authToken;
 const client = require("twilio")(AccountSid,authToken);
-
+const PORT =process.env.PORT || 8080;
 const app = express();
 
 app.use(morgan("dev"));
@@ -65,9 +64,10 @@ console.log("REQ.BODY:  ", req.body);
 
 
 
-app.listen(8080, () => {
-  console.log("listening at http://localhost:8080");
+app.listen(PORT, () => {
+  console.log(`listening at http://localhost:${PORT}`);
 });
 
 
 
+module.exports = app;
