@@ -1,8 +1,8 @@
 deployment:
 prod:
-branch:master
+branch: master
 heroku:
 appname: aq-portfolio
 machine:
 node:
-version:8.1.4
+version: 8.1.4
