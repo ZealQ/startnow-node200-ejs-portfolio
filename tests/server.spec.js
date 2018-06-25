@@ -9,7 +9,6 @@ const expect = chai.expect;
 describe('server', function() {
   this.timeout(5000);
   beforeEach((done) => {
-    
     done();
   });
 

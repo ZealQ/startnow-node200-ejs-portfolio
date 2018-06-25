@@ -1,249 +1,200 @@
-body,
-html {
-  font-family: 'Antic Didone', serif;
-  height: 100%;
-  background-color: #000c40;
-  text-shadow: 3px 3px 4px black;
-  line-height: 1.8;
-}
 
+  body, html {
+    overflow: hidden;
+    font-family: 'Antic Didone', serif;
+    background: -webkit-gradient(linear, left top, right top, from(#F0f2f0), to(#ACC9D6));
+    background: linear-gradient(to right, #f0f0f0, #ACC9D6);
+  }
+  
+  div{
+    font-family: 'Antic Didone', serif;
+  }
 
-p,
-b,
-h3,
-h2,
-h4,
-div {
-  font-family: 'Antic Didone', serif;
-  color: white;
-}
+  body {
+    font: 100% / 1.5;
+  }
 
+  * {
+    margin:0;
+    padding:0;
+  }
 
-.me {
-  box-shadow: 0 7px 20px 0 black, 0 8px 20px 0 white;
-  width: 300px;
-  height: 300px;
-}
+   /* centre the content in the parallax layers 
+   ----------------------------------------------*/
+  .title {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 
-.parallax {
-  height: 500px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-perspective: 300px;
-  perspective: 300px;
-}
+    @media(max-width:855px){
+      #nav-bar{
+        margin: -7px;
+      }
+    }
 
+/* Parallax base styles
+  --------------------------------------------- */
 
-.parallax__group {
-  position: relative;
-  height: 500px;
-  height: 230vh;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
+  .parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+    -webkit-perspective-origin-x: 100%;
+  }
 
+  .parallax__group {
+    position: relative;
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
 
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform-origin-x: 100%;
+  }
 
-.parallax__layer--fore {
-  -webkit-transform: translateZ(90px) scale(.7);
-  transform: translateZ(90px) scale(.7);
-  z-index: 1;
-}
+  .parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+  }
 
-.parallax__layer--base {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  z-index: 4;
-}
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+  }
 
-.parallax__layer--back {
-  -webkit-transform: translateZ(-300px) scale(2);
-  transform: translateZ(-300px) scale(2);
-  z-index: 3;
-}
+  .parallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+  }
 
-.parallax__layer--deep {
-  -webkit-transform: translateZ(-600px) scale(3);
-  transform: translateZ(-600px) scale(3);
-  z-index: 2;
-}
+  .parallax__layer--deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+  }
 
-/* banners */
+  /* style the groups
+  --------------------------------------------- */
 
-.banner.secondary {
-  background: blueviolet;
-  background: -webkit-gradient(linear, left top, right top, from(#F0f2f0), to(#000c40));
-  background: linear-gradient(to right, #f0f0f0, #000c40);
-  z-index: -3;
-}
-
-.banner.md {
-  margin-top: 400px;
-  margin-bottom: 1px;
-  height: 400px;
-}
-
-.banner.skew-alt {
-  -webkit-transform: skewY(-10deg);
-  transform: skewY(-10deg);
-}
-
-.banner.skew {
-  -webkit-transform: skewY(10deg);
-  transform: skewY(10deg);
-}
-
-.banner {
-  position: absolute;
-  width: 100%;
-  height: 400px;
-  background: #424b68;
-  background: -webkit-gradient(linear, right top, left top, from(#000428), to(#004e92));
-  background: linear-gradient(to left, #000428, #004e92);
-}
-
-
-h2{
-  text-align: right;
-}
-
-h2 span.long_underline {
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 0;
-  margin-top: 4px;
-  background: #000;
-}
-
-h3 span.long_underline {
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 0;
-  margin-top: 4px;
-  background: #000;
-}
-
-
-body,
-
-
-body {
-  font: 100% / 1.5 'Antic Didone', serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.parallax {
-  font-size: 200%;
-}
-
-
-#group1 {
-  z-index: 5;
-  /* slide over group 2 */
-}
-
-/* #group1 .parallax__layer--base {
-  background-image: url("http://www.yim778.com/data/out/28/726185.jpg");
+  #group1 {
+    z-index: 5; /* slide over group 2 */
+  }
+  #group1 .parallax__layer--base {
+  background-image: url("/img/Hello.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-} */
+  }
 
-#group2 {
-  z-index: 3;
-  /* slide under groups 1 and 3 */
-}
+  #group2 {
+    z-index: 3; /* slide under groups 1 and 3 */
+  }
+  #group2 .parallax__layer--back {
+    background: white;
+  }
 
-/* #group2 .parallax__layer--back {
-  background-image: url("http://auto.ferrari.com/en_US/wp-content/uploads/sites/7/2017/08/ferrari-portofino-2017-reveal-FRONT.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
+  #group3 {
+    z-index: 4; /* slide over group 2 and 4 */
+  }
+  #group3 .parallax__layer--base {
+    background: -webkit-gradient(linear, left top, right top, from(#ACC9D6), to(#f0f0f0));
+    background: linear-gradient(to right, #ACC9D6, #f0f0f0);
+  }
 
-#group3 {
-  z-index: 4;
-  /* slide over group 2 and 4 */
-}
+  #group4 {
+    z-index: 2; /* slide under group 3 and 5 */
+  }
 
-/* #group3 .parallax__layer--base {
-  background-image: url("https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/model/one-off/centenario/slider/centenario.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
+  #group4 .parallax__layer--deep {
+    background-image: url("/img/blue-sky-clouds.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 400px;
+  }
+  
+  @media(max-width:855px){
+    #group4 .parallax__layer--deep {
+      background-image: url("/img/blue-sky-clouds.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: 150px;
+    }
+  }
 
-#group4 {
-  z-index: 2;
-  /* slide under group 3 and 5 */
-}
+  #group5 {
+    z-index: 3; /* slide over group 4 and 6 */
+  }
+  #group5 .parallax__layer--base {
+    background: royalblue;
+  }
 
-/* #group4 .parallax__layer--deep {
-  background-image: url("https://www.fab-design.com/files/fab/mclaren-slr/fab-mclaren-slr-00124.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
+  #group6 {
+    z-index: 2; /* slide under group 5 and 7 */
+  }
+  #group6 .parallax__layer--back {
+    background: rgb(245,235,100);
+  }
 
-#group5 {
-  z-index: 3;
-  /* slide over group 4 and 6 */
-}
+  #group7 {
+    z-index: 3; /* slide over group 7 */
+  }
+  #group7 .parallax__layer--base {
+    background: purple;
+  }
 
-/* #group5 .parallax__layer--base {
-  background-image: url("http://st.motortrend.com/uploads/sites/5/2016/12/2018-Lexus-LC-500h-rear-three-quarter.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
+  /* All the Text Animations
+  ----------------------------------------- */
 
-#group6 {
-  z-index: 2;
-  /* slide under group 5 and 7 */
-}
-
-/* #group6 .parallax__layer--back {
-  background-image: url("http://img.xcitefun.net/users/2015/01/375596,xcitefun-spring-nature-1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
-#group7 {
-  z-index: 3;
-  /* slide over group 7 */
-}
-
-/* #group7 .parallax__layer--base {
-  background-image: url("http://www.lyhyxx.com/data/out/16/3871006-spring-nature-wallpapers.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-} */
-
-.text-animation {
+   .text-animation {
   list-style: none;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  height: 70vh;
-
-margin-top: -200px
+  height: 35vh;
+  margin-top: -200px;
+  margin-left: -300px;
 }
 
-@media(orientation:portrait){
+@media(max-width:855px){
   .text-animation{
-  display: inline-table; 
+  display:contents; 
   }
+}
+#welcome2{
+  left: 65%;
+  top: 50%;
+}
+
+#to{
+  left:65%;
+  top:60%
+}
+
+#my{
+  left:65%;
+  top:70%
+}
+
+#portf{
+  left:65%;
+  top:80%
 }
 
 .text-animation li {
@@ -251,10 +202,11 @@ margin-top: -200px
   margin-right: 5px;
   font-family: 'Antic Didone', serif;
   font-weight: 400;
-  font-size: 60px;
-  color: white;
+  font-size: 55px;
+  color: #00417F;
   opacity: 1;
-  transition: all 1s ease
+  transition: all 1s ease;
+  text-shadow: 3px 3px 4px black;
 }
 
 .text-animation li:last-child {
@@ -271,8 +223,8 @@ margin-top: -200px
 }
 
 .text-animation.hidden li:nth-child(2) {
-  transform: translateX(20px)translateY(100px);
-  -webkit-transform: translateX(20px)translateY(100px);
+  transform: translateX(-200px)translateY(100px);
+  -webkit-transform: translateX(-200px)translateY(100px);
 }
 
 .text-animation.hidden li:nth-child(3) {
@@ -281,8 +233,8 @@ margin-top: -200px
 }
 
 .text-animation.hidden li:nth-child(4) {
-  transform: translateX(10px)translateY(-200px);
-  -webkit-transform: translateX(10px)translateY(-200px);
+  transform: translateX(10px)translateY(-400px);
+  -webkit-transform: translateX(10px)translateY(-400px);
 }
 
 .text-animation.hidden li:nth-child(5) {
@@ -291,23 +243,23 @@ margin-top: -200px
 }
 
 .text-animation.hidden li:nth-child(6) {
-  transform: translateX(20px)translateY(-20px);
-  -webkit-transform: translateX(20px)translateY(-20px);
+  transform: translateX(300px)translateY(-400px);
+  -webkit-transform: translateX(300px)translateY(-400px);
 }
 
 .text-animation.hidden li:nth-child(7) {
-  transform: translateX(30px)translateY(200px);
-  -webkit-transform: translateX(30px)translateY(200px);
+  transform: translateX(30px)translateY(-400px);
+  -webkit-transform: translateX(30px)translateY(-400px);
 }
 
 .text-animation.hidden li:nth-child(8) {
-  transform: translateX(-200px)translateY(-200px);
-  -webkit-transform: translateX(-200px)translateY(-200px);
+  transform: translateX(-200px)translateY(-400px);
+  -webkit-transform: translateX(-200px)translateY(-400px);
 }
 
 .text-animation.hidden li:nth-child(9) {
-  transform: translateX(20px)translateY(100px);
-  -webkit-transform: translateX(20px)translateY(100px);
+  transform: translateX(20px)translateY(-400px);
+  -webkit-transform: translateX(20px)translateY(-400px);
 }
 
 .text-animation.hidden li:nth-child(10) {
@@ -325,77 +277,423 @@ margin-top: -200px
   -webkit-transform: translateX(-300px)translateY(-200px);
 }
 
+/* My bio
+--------------------- */
+#about{
+  font-family:'Antic Didone', serif;
+  font-size: 50px;
+  text-align: left;
+  margin-left: 50px;
+}
+
+#about:after {
+  content: ' ';
+  display: block;
+  width: 240px;
+  height: 1px;
+  margin: 0px 0 20px;
+  background:black;
+}
+
+h4.bio_title{
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Antic Didone', serif;
+}
 
 .bio {
   margin-left: 160px;
   margin-right: 160px;
   position: static;
+  font-size: 25px;
 }
 
-
-@media(max-width:600px){
+@media(max-width:855px){
   .bio{
- margin-left: 0;
- margin-right: 0;  
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 18px
   }
 }
 
-@media(orientation:landscape){
-  .sk{
-    margin-top: 670px; 
+.me {
+  box-shadow: 0 7px 20px 0 black, 0 8px 20px 0 white;
+  width: 400px;
+}
+
+@media(max-width:855px){
+  .me {
+    box-shadow: 0 7px 20px 0 black, 0 8px 20px 0 white;
+    width: 300px;
   }
 }
 
+/* The skill logos
+------------------------------------------- */
 
-.textb {
+#skills{
+  font-family:'Antic Didone', serif;
+  font-size: 50px;
+  text-align: left;
+  margin-left: 50px;
+}
+
+#skills:after {
+  content: ' ';
+  display: block;
+  width: 121px;
+  height: 1px;
+  margin: 0px 0 20px;
+  background:black;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
+
+@media(max-width: 855px){
+.container{
+    width: 70%;
+ }
+}
+
+.container .row {
+  margin-left: -.75rem;
+  margin-right: -.75rem;
+}
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.skill-icon {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.row .col {
+  float: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 .75rem;
+  min-height: 1px;
+}
+
+.row .col.s6 {
+  width: 50%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+
+@media (max-width: 855px){
+.row .col.s6 {
+    width: 25%;
+    margin-left: 20px;
+    left: auto;
+    right: auto;
+    }
+  }
+
+.skill-icon {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.skill-icon svg {
+  width: 75px;
+  height: 75px;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.skill-icon h6 {
+  font-weight: bold;
+  font-size: 1em;
+  font-family: 'Antic Didone', serif;
+}
+
+@media(max-width:855px){
+  .skill-icon h6 {
+    font-weight: bold;
+    font-size: 1em;
+    font-family: 'Antic Didone', serif;
+    margin-left: 19px;
+  }
+}
+
+/* contact section
+------------------------------------- */
+#contact{
+  font-family:'Antic Didone', serif;
+  font-size: 50px;
+  text-align: left;
+  margin-left: 50px;
+}
+
+#contact:after {
+  content: ' ';
+  display: block;
+  width: 167px;
+  height: 1px;
+  margin: 0px 0 20px;
+  background:black;
+}
+
+#message{
+  margin-top: -4px
+}
+
+@media (max-width: 855px){
+  #message {
+    margin-top: -8px;
+  }
+}
+
+/* Footer
+----------------------------- */
+.foot{
+  background-color:transparent;
+  padding: 64px;
+  width: 100%;
+  margin-left: -16px;
+}
+
+@media (max-width: 855px){
+  .foot{
+    background-color:transparent;
+    padding: 64px;
+    width: 100%;
+    margin-left: -16px;
+  }
+}
+
+#footfont{
+  font-size: 23px;
+}
+
+.center {
+  margin: auto;
+  width: 25%;
+}
+
+@media (max-width: 855px){
+  .center {
+    margin: auto;
+    width: 30%;
+  }
+}
+
+@media (max-width: 414px){
+  .center {
+    margin: auto;
+    width: 65%;
+  }
+}
+
+#side{
+  margin-top:65px;
+}
+
+/* portfolio and title to more projects
+-------------------------------- */
+
+#thumbnail{
+  width: 400px;
+  box-shadow: 0 7px 20px 0 black, 0 8px 20px 0 white;
+}
+
+@media (max-width: 855px){
+  #thumbnail {
+    width:300px;
+    height: 100%;
+    box-shadow: 0 7px 20px 0 black, 0 8px 20px 0 white;
+   }
+  }
+
+#thumbnailF{
+  width: 400px;
+  height: 800px;
+  box-shadow: 0 7px 20px 0 black, 0 8px 20px 0 white;
+}
+
+@media (max-width: 855px){
+  #thumbnailF {
+    width:175px;
+    height: 100%;
+    box-shadow: 0 7px 20px 0 black, 0 8px 20px 0 white;
+   }
+  }
+
+.lead {
+  margin-bottom: 22px;
   font-size: 40px;
 }
 
-.textc {
-  font-size: 30px;
-}
-
-.pp {
-  width: 100px;
-  height:100px;
-  margin-left: 40px;
-  box-shadow: 0 7px 20px 0 black, 0 8px 20px 0 white;
--webkit-transition: width 1s, height 1s, -webkit-transform 1s;
-transition: width 1s, height 1s, transform 1s;
-
-transition-property: width,height,transform,font-size,opacity;
-transition-duration: 1s,1s,1s,1s,1s,1s;
-border-radius: 5px;
-}
-
-.pp:hover {
-width: 300px;
-height: 300px;
-}
-
-@media(orientation:landscape){
-  #tp{
-  display: none; 
+@media (max-width: 855px){
+  .lead {
+      font-size: 24px;
+   }
   }
+
+  #read-me-btn{
+    color: blueviolet;
+    background-color: lightgray;
+    margin-left: 25px;
+  }
+
+  /* background animation for portfolio page
+  ------------------------------------------- */
+  #animate-area	{
+    width: 100%;
+    height: 970px;
+    background-image:url("/img/blue-sky-clouds.jpeg");
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    background-size: cover;
+    animation: animatedBackground 40s linear infinite;
+  }
+
+  @-webkit-keyframes animatedBackground{
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+  }
+  
+/* projects
+----------------------------------- */
+.thumbnailDemoFicus{
+  width: 150px;
+  box-shadow: 0 7px 20px 0 black, 0 8px 20px 0 white;
 }
 
-.pcd{
-  position: absolute;
-    left: 0;
-    top: 30%;
-}
-.cdd{
-  position: relative;
-  top:40%;
-}
+@media (max-width: 855px){
+  .thumbnailDemoFicus{
+    width:100px;
+    height: 100%;
+    box-shadow: 0 7px 20px 0 black, 0 8px 20px 0 white;
+   }
+  }
 
+  #animate-area-projects{
+    width: 100%;
+    height: 1200px;
+    background-image:url("/img/blue-sky-clouds.jpeg");
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    background-size: cover;
+    animation: animatedBackground 40s linear infinite;
+  }
+
+  @-webkit-keyframes animatedBackground{
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+  }
+
+  @media (max-width:855px){
+    #animate-area-projects{
+      width: 100%;
+      height: 1200px;
+      background-image:url("/img/blue-sky-clouds.jpeg");
+      background-position: 0px 0px;
+      background-repeat: repeat-x;
+      background-size: cover;
+      animation: animatedBackground 40s linear infinite;
+    }
+  }
+
+  @media (max-width:420px){
+    #animate-area-projects{
+      width: 100%;
+      height: 1750px;
+      background-image:url("/img/blue-sky-clouds.jpeg");
+      background-position: 0px 0px;
+      background-repeat: repeat-x;
+      background-size: cover;
+      animation: animatedBackground 40s linear infinite;
+    }
+  }
+
+  .Ficus-lead{
+    font-family:'Antic Didone', serif;
+    font-size: 50px;
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  
+  .Ficus-lead:after {
+    content: ' ';
+    display: block;
+    width: 167px;
+    height: 1px;
+    margin: 0px 0 20px;
+    background:black;
+  }
+
+  #ficus-vid{
+    width:500px;
+    height: 400px;
+  }
+
+  @media(max-width: 420px){
+    #ficus-vid{
+      width: 280px;
+      height: 300px;
+    }
+  }
+
+  @media (max-width:855px){
+    #ficus-vid{
+      width: 280px;
+      height: 300px;
+    }
+  }
+
+
+  .Project-lead{
+    font-family:'Antic Didone', serif;
+    font-size: 50px;
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  
+  .Project-lead:after {
+    content: ' ';
+    display: block;
+    width: 300px;
+    height: 1px;
+    margin: 0px 0 20px;
+    background:black;
+  }
+
+  .Change-lead{
+    font-family:'Antic Didone', serif;
+    font-size: 50px;
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  
+  .Change-lead:after {
+    content: ' ';
+    display: block;
+    width: 420px;
+    height: 1px;
+    margin: 0px 0 20px;
+    background:black;
+  }
+
+/* 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button{
   -webkit-appearance: none;
   margin: 0;
 
-}
-
-#em{
-  margin-top: 10px;
-}
+} */

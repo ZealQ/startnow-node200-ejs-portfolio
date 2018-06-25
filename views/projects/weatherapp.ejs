@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- All required links -->
+  <%- include("quicklink/head.ejs") %>
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <%- include("quicklink/projectNav.ejs") %>
+    <div class="parallax">
+
+      <div id="group5" class="parallax__group">
+        <div class="parallax__layer parallax__layer--fore">
+
+          <p class="Project-lead">Weather App</p>
+
+          <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+              <p>
+                <b>
+              </p>
+              <br>
+              <img id="thumbnail" src="/img/weather-app.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me">
+            </div>
+            <div class="w3-col m6 w3-padding-large">
+              <h4>Summary</h4>
+              <br>
+              <p class="info-text">A simple application to check the weather utilizing the Open Weather Map API. A fun feature that I implemented
+                was the search history. When a user searches for a city, a timestamp is created in the history component.
+                Also, buttons are pre-set for 5 quick searches allowing a user to easily click and see the weather in that
+                city.
+              </p>
+            </div>
+          </div>
+
+          <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+              <p>
+                <b>
+              </p>
+              <br>
+              <img id="thumbnail" src="/img/city-search.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me">
+            </div>
+            <div class="w3-col m6 w3-padding-large">
+              <h4>Technologies</h4>
+              <br>
+              <p class="info-text">Front End: React / Redux / HTML5 / CSS3</p>
+              <br>
+              <p class="info-text">Back End: Node.js / Express</p>
+              <br>
+              <p class="info-text">I dug deeper into Redux in this project and gained a stronger understanding of the flow of actions, reducers,
+                and the store. I was also introduced to Redux promise middleware - when a promise is dispatched from an action
+                creator.
+              </p>
+            </div>
+          </div>
+
+          <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+              <p>
+                <b>
+              </p>
+              <br>
+              <img id="thumbnail" src="/img/weekly-forcast.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me">
+            </div>
+            <div class="w3-col m6 w3-padding-large">
+              <h4>Weather Search</h4>
+              <br>
+              <p class="info-text">Implementing the search bar feature was done through sending a GET request to the Open Weather Map API with
+                parameters for an array of the weather that match the search criteria. Once the response from the server
+                is received, the results are displayed on the screen through mapping over the array and displaying each item
+                in a container with the name, image, and a weekly forcast with more details.</p>
+            </div>
+
+            <div>
+              <a href="https://is-it-going-to-rain.herokuapp.com/" class="w3-btn" id="read-me-btn" target="_blank">Click To View More</a>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div id="animate-area-projects"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- All required Functions -->
+    <%- include("quicklink/functions.ejs") %>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- All required links -->
+  <%- include("quicklink/head.ejs") %>
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <%- include("quicklink/projectNav.ejs") %>
+    <div class="parallax">
+
+      <div id="group5" class="parallax__group">
+        <div class="parallax__layer parallax__layer--fore">
+
+          <p class="Project-lead">Movie Finder</p>
+
+          <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+              <p>
+                <b>
+              </p>
+              <br>
+              <img id="thumbnail" src="/img/movie.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me">
+            </div>
+            <div class="w3-col m6 w3-padding-large">
+              <h4>Summary</h4>
+              <br>
+              <p class="info-text">Movie finder was a fun project it took what I knew about react and gave me a fun new task to master. learning
+                how to create a route. Not only that but I gain a better understanding routing and how it works but also
+                I got a much better handel on how react redux function as well. In this project i also used the IMDB api
+                to help fill in the information I needed</p>
+            </div>
+          </div>
+
+          <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+              <p>
+                <b>
+              </p>
+              <br>
+              <img id="thumbnail" src="/img/movie-select.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me">
+            </div>
+            <div class="w3-col m6 w3-padding-large">
+              <h4>Technologies</h4>
+              <br>
+              <p class="info-text"> Front End: React / Redux / React-Router / HTML5 / CSS3 </p>
+              <br>
+              <p class="info-text">Back End: Node.js / Express </p>
+            </div>
+          </div>
+
+          <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+              <p>
+                <b>
+              </p>
+              <br>
+              <img id="thumbnail" src="/img/movie-info.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me">
+            </div>
+            <div class="w3-col m6 w3-padding-large">
+              <h4>Movie Search</h4>
+              <br>
+              <p class="info-text">Implementing the search bar feature was done through sending a GET request to the OMDB API with parameters
+                for an array of the movies that match the search criteria. Once the response from the server is received,
+                the results are displayed on the screen through mapping over the array and displaying each item in a container
+                with the name, image, and a link for more details.
+              </p>
+            </div>
+
+            <div>
+              <a href="https://project-moviefinder.herokuapp.com/" class="w3-btn" id="read-me-btn" target="_blank">Click To View More</a>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div id="animate-area-projects"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- All required Functions -->
+    <%- include("quicklink/functions.ejs") %>
+</body>
+
+</html>

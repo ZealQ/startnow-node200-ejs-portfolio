@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- All required links -->
+  <%- include("quicklink/head.ejs") %>
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <%- include("quicklink/projectNav.ejs") %>
+    <div class="parallax">
+
+      <div id="group5" class="parallax__group">
+        <div class="parallax__layer parallax__layer--fore">
+
+          <p class="Ficus-lead">Ficus</p>
+
+          <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+              <p>
+                <b>
+              </p>
+              <br>
+              <iframe id="ficus-vid" src="https://www.youtube.com/embed/vOw22UAQ_IA" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+            </div>
+            <div class="w3-col m6 w3-padding-large">
+              <h4> Summary </h4>
+              <br>
+              <p class="info-text">Throughout this project, I dug deeper into the facets of React-Native, React-Navigation, Redux, and Loopback.
+                Our goal at the end of this project was to enable investors to sign up, buy and sell stocks, and to search
+                for stocks by name. Investors were also able to see how they compared to other via the third party screen.
+                The core features I focused on were setting up the Navigating, implementing the search bar, calculating an
+                investors funds and investments, and allowing the view of stock information.</p>
+            </div>
+          </div>
+
+          <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+              <p>
+                <b>
+              </p>
+              <br>
+              <img src="/img/Ficus.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off thumbnailDemoFicus" alt="Ficus-Splash">
+            </div>
+            <div class="w3-col m6 w3-padding-large">
+              <h4>Navigation</h4>
+              <br>
+              <p class="info-text">I gained a vast amount of insight working on React-Navigation. Where Navigating around in your account seems
+                to be such a small portion of a user’s experience, it is also one that is most crucial. Spending time thinking
+                about how to manage multiple user Navigation options allowed me to deepen my understanding of navigators
+                and their relations to each other. I set up a base stack navigator and built from that, to allow for the
+                tab as well as the drawer navigator to work seamlessly with each other. </p>
+            </div>
+          </div>
+
+          <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+              <p>
+                <b>
+              </p>
+              <br>
+              <img src="/img/Account.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off thumbnailDemoFicus" alt="Account-Navigation">
+            </div>
+            <div class="w3-col m6 w3-padding-large">
+              <h4>Reflection</h4>
+              <br>
+              <p class="info-text">After completing this 3-week project, it has solidified my knowledge of working on full stack applications.
+                We utilized various open source npm modules – one favorite being native-base. Native-base allowed us to implement
+                features such as buttons or cards, that were pre-crafted for react-native, witch help us for specific styles
+                we were required to use to owner specifications.</p>
+              <br>
+              <p class="info-text">I loved working on this project as it allowed me to learn a new skill, as well as work on something I am passionate
+                about and that others will be able to enjoy. I have more to learn and am eager to get started. In future
+                projects I want to be able to work on styling more so that I can create custom styles for object in the projects
+                without having to rely on npm modules.
+              </p>
+            </div>
+
+            <div>
+                <a href="https://itunes.apple.com/us/app/ficus-mini/id1380861174?mt=8" class="w3-btn" id="read-me-btn" target="_blank">Click To View More</a>
+              </div>
+
+          </div>
+
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div id="animate-area-projects"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- All required Functions -->
+    <%- include("quicklink/functions.ejs") %>
+</body>
+
+</html>

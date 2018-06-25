@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- All required links -->
+  <%- include("quicklink/head.ejs") %>
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <%- include("quicklink/projectNav.ejs") %>
+    <div class="parallax">
+
+      <div id="group5" class="parallax__group">
+        <div class="parallax__layer parallax__layer--fore">
+
+          <p class="Project-lead">Daves Depot</p>
+
+          <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+              <p>
+                <b>
+              </p>
+              <br>
+              <img id="thumbnail" src="/img/Daves-Depot.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me">
+            </div>
+            <div class="w3-col m6 w3-padding-large">
+              <h4>Summary</h4>
+              <p class="info-text">This was a one week sprint project, we were given a choice between three different model web sites. as a team
+                we all chose to do it based on Etsy.com. The features that I worked on in this project were, the sign up
+                and log in as well as implementing the database with loopback and mongodb. First was the ERD diagram that
+                was built to show relations between ann the entity's like the users to the sign up and login and well as
+                how their information would be stored to later display on the uses account page.
+              </p>
+            </div>
+          </div>
+
+          <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+              <p>
+                <b>
+              </p>
+              <br>
+              <img id="thumbnail" src="/img/signup.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me">
+            </div>
+            <div class="w3-col m6 w3-padding-large">
+              <h4>Data Base</h4>
+              <br>
+              <p class="info-text">When working on this project the Database was a crucial part. It was the main component that needed to be built
+                out in order to start the construction of the project. The first parts of building it out was to make An
+                ERD (Entity Relation Diagram) witch was a map to show how any and all entities would relate to each other.
+                Once that was complete the Database could be coded in. with this project i chose to use loopback and mongodb
+                as the building block. Once the database was coded in I started implementing the signup and login features
+                with worked in unison with the database to register any and all users that sign up.
+              </p>
+            </div>
+          </div>
+
+          <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+              <p>
+                <b>
+              </p>
+              <br>
+              <img id="thumbnail" src="/img/checkout.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me">
+            </div>
+            <div class="w3-col m6 w3-padding-large">
+              <h4>Refection</h4>
+              <br>
+              <p class="info-text">After the 1-week project was complete I had a new understanding of a lot of things. I learned so much working
+                with a team, devising new and creative ways of coding. It was a blast a lot of collaboration, disagreements,
+                fails and successes happened. But through it all we stood strong and faced any and all challenges that came
+                out way.
+              </p>
+              <p class="info-text">One main thing that we implemented and more elaborated on was using git. I learned how powerful it can be to
+                have the ability to store create branch and collaborate you work with others and how exciting and innovative
+                it was when were were able to merge the hard work that we as individuals had done separately and now we're
+                going to make one extraordinary thing together.
+              </p>
+            </div>
+
+            <div>
+              <a href="https://davesdepot.herokuapp.com/" class="w3-btn" id="read-me-btn" target="_blank">Click To View More</a>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div id="animate-area-projects"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- All required Functions -->
+    <%- include("quicklink/functions.ejs") %>
+</body>
+
+</html>

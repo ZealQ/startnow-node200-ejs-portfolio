@@ -14,34 +14,58 @@ app.use(express.static("public"));
 
 app.set("port", (process.env.PORT || 8080));
 
-app.set("views", "./views");
+app.set("views", ["./views","./views/projects"]);
 
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
   const data = {
     person: {
-      firstName: 'Alonzo',
-      lastName: 'Quintero',
+      firstName: "Alonzo",
+      lastName: "Quintero",
     }
   }
 
   res.render("index")
 });
 
-app.get('/portfolio', (req, res) => {
-  res.render('portfolio');
+app.get("/portfolio", (req, res) => {
+  res.render("portfolio");
 });
 
-app.get('/contact', (req, res) => {
-  res.render('contact');
+app.get("/contact", (req, res) => {
+  res.render("contact");
 });
 
-app.post('/thanks', (req, res) => {
+app.get("/moreProjects", (req, res) => {
+  res.render("moreProjects");
+});
 
-  const AccountSid = process.env.AccountSid;
+app.get("/davesdepot", (req, res) => {
+  res.render("davesdepot");
+});
+
+app.get("/changecalc", (req, res) => {
+  res.render("changecalc");
+});
+
+app.get("/moviefinder", (req, res) => {
+  res.render("moviefinder");
+});
+
+app.get("/weatherapp", (req, res) => {
+  res.render("weatherapp");
+});
+
+app.get("/VSTDA", (req, res) => {
+  res.render("VSTDA");
+});
+
+app.post("/thanks", (req, res) => {
+
+  const accountSid = process.env.accountSid;
   const authToken = process.env.authToken;
-  const client = require("twilio")(AccountSid, authToken);
+  const client = require("twilio")(accountSid, authToken);
 
 
   var userInfo = {
@@ -55,14 +79,14 @@ app.post('/thanks', (req, res) => {
   client.messages.create({
     to: "+16192611050",
     from: "+16193046191",
-    body: '\n' + `Interest from: ${userInfo.firstName} ${userInfo.lastName}` + '\n' +
-      `PhoneNumber: ${userInfo.phoneNumber}` + '\n' +
-      `Email: ${userInfo.email}` + '\n' +
+    body: "\n" + `Interest from: ${userInfo.firstName} ${userInfo.lastName}` + "\n" +
+      `PhoneNumber: ${userInfo.phoneNumber}` + "\n" +
+      `Email: ${userInfo.email}` + "\n" +
       `Message: ${userInfo.message}`,
   }, function (err, message) {
     console.log(message.sid);
   });
-  res.render('thanks', { userInfo: userInfo })
+  res.render("thanks", { userInfo: userInfo })
 });
 
 
@@ -70,7 +94,3 @@ app.post('/thanks', (req, res) => {
 module.exports = app.listen(PORT, () => {
   console.log(`listening at http://localhost:${PORT}`);
 });
-
-
-
-module.exports = app;
